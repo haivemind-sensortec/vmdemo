@@ -19,133 +19,6 @@
             color: #333;
         }
 
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-shrink: 0;
-        }
-
-        .brand-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-        }
-
-        .nav-brand h1 {
-            font-size: 2em;
-            font-weight: bold;
-            color: #2d3748;
-            text-shadow: none;
-            margin: 0;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .vehicle-selector {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .vehicle-selector h3 {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-
-        .vehicle-scroll {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            padding: 10px 0;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .vehicle-scroll::-webkit-scrollbar {
-            display: none;
-        }
-
-        .vehicle-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            padding: 15px;
-            min-width: 180px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            flex-shrink: 0;
-        }
-
-        .vehicle-card:hover {
-            background: rgba(255, 255, 255, 1);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .vehicle-card.active {
-            border-color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .vehicle-icon {
-            font-size: 1.8em;
-            width: 40px;
-            text-align: center;
-        }
-
-        .vehicle-info {
-            flex: 1;
-        }
-
-        .vehicle-name {
-            font-weight: bold;
-            color: #2d3748;
-            font-size: 0.9em;
-        }
-
-        .vehicle-id {
-            color: #718096;
-            font-size: 0.8em;
-            margin-top: 2px;
-        }
-
-        .vehicle-status {
-            font-size: 1.2em;
-        }
-
         .dashboard {
             max-width: 1400px;
             margin: 0 auto;
@@ -239,6 +112,72 @@
             margin-top: 15px;
         }
 
+        .ai-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .ai-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .prediction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .prediction-card {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #4299e1;
+        }
+
+        .prediction-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .prediction-text {
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        .maintenance-priority {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .priority-high { background: #fed7d7; color: #e53e3e; }
+        .priority-medium { background: #fef5e7; color: #d69e2e; }
+        .priority-low { background: #c6f6d5; color: #2f855a; }
+
         .live-indicator {
             display: inline-block;
             width: 12px;
@@ -276,15 +215,141 @@
             font-weight: bold;
             color: #2d3748;
         }
+                .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .brand-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+        }
+
+        .nav-brand h1 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2d3748;
+            text-shadow: none;
+            margin: 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .vehicle-selector {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .vehicle-selector h3 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .vehicle-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .vehicle-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .vehicle-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 15px;
+            min-width: 180px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            flex-shrink: 0;
+        }
+
+        .vehicle-card:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .vehicle-card.active {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .vehicle-icon {
+            font-size: 1.8em;
+            width: 40px;
+            text-align: center;
+        }
+
+        .vehicle-info {
+            flex: 1;
+        }
+
+        .vehicle-name {
+            font-weight: bold;
+            color: #2d3748;
+            font-size: 0.9em;
+        }
+
+        .vehicle-id {
+            color: #718096;
+            font-size: 0.8em;
+            margin-top: 2px;
+        }
+
+        .vehicle-status {
+            font-size: 1.2em;
+        }
+        
+
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-content">
             <div class="nav-brand">
-                <div class="brand-icon">🧠</div>
-                <h1>HAIVEMIND</h1>
+                <h1>H:AI:VEMIND</h1>
             </div>
             <div class="vehicle-selector">
                 <h3>Fahrzeug auswählen:</h3>
@@ -333,11 +398,10 @@
             </div>
         </div>
     </nav>
-
     <div class="dashboard">
         <div class="header">
             <h1>🚗 Auto-Monitoring Dashboard</h1>
-            <p><span class="live-indicator"></span>Live-Überwachung aktiv - <span id="selected-vehicle">VW Golf GTI (DE-MZ-1234)</span></p>
+            <p><span class="live-indicator"></span>Live-Überwachung aktiv</p>
         </div>
 
         <div class="status-overview">
@@ -362,7 +426,66 @@
                 <div class="sensor-status status-warning">Bald fällig</div>
             </div>
         </div>
+<div class="ai-section">
+            <div class="ai-header">
+                <div class="ai-icon">🤖</div>
+                <h2>KI-Analyse &amp; Predictive Maintenance</h2>
+            </div>
+            
+            <div class="prediction-grid">
+                <div class="prediction-card" style="grid-column: 1 / -1;">
+                    <div class="prediction-title">
+                        ⚠️ Motortemperatur-Vorhersage
+                        <span class="maintenance-priority priority-high">Hoch</span>
+                    </div>
+                    <div class="prediction-text">
+                        Analyse zeigt steigenden Temperaturtrend bei Motorbank Links. Basierend auf aktuellen Mustern wird um ca. 15:00 Uhr eine kritische Temperatur von 105°C erreicht. Sofortige Überwachung empfohlen.
+                    </div>
+                    <div class="chart-container" style="height: 250px; margin-top: 20px;">
+                        <canvas id="prediction-chart" width="1960" height="500" style="display: block; box-sizing: border-box; height: 250px; width: 980px;"></canvas>
+                    </div>
+                </div>
 
+                <div class="prediction-card">
+                    <div class="prediction-title">
+                        Motorbank-Analyse
+                        <span class="maintenance-priority priority-medium">Mittel</span>
+                    </div>
+                    <div class="prediction-text">
+                        Temperaturungleichgewicht zwischen linker (92°C) und rechter Motorbank (88°C) erkannt. Mögliche Ursache: Ungleichmäßige Kühlmittelverteilung.
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-title">
+                        Kühlsystem-Status
+                        <span class="maintenance-priority priority-low">Niedrig</span>
+                    </div>
+                    <div class="prediction-text">
+                        Kühlmitteltemperatur im Normbereich. Thermostat arbeitet ordnungsgemäß. Kühlmittelfüllstand ausreichend.
+                    </div>
+                </div>
+
+                <div class="prediction-card">
+                    <div class="prediction-title">
+                        Abgasnachbehandlung
+                        <span class="maintenance-priority priority-low">Niedrig</span>
+                    </div>
+                    <div class="prediction-text">
+                        Lambda-Sensoren arbeiten optimal. Katalysator-Effizienz bei 98%. Keine Anomalien festgestellt.
+                    </div>
+                </div>
+                  <div class="prediction-card">
+                    <div class="prediction-title">
+                        Vibrations-Überwachung
+                        <span class="maintenance-priority priority-medium">Mittel</span>
+                    </div>
+                    <div class="prediction-text">
+                        Leicht erhöhte Vibrationen am Motor. Möglicherweise verschlissene Motorlager. Prüfung in Werkstatt empfohlen.
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="sensor-grid">
             <!-- Motor Temperatursensoren -->
             <div class="sensor-card">
@@ -532,6 +655,145 @@
         };
 
         const charts = {};
+        let predictionChart;
+
+        // Initialisiere Charts inklusive Prediction Chart
+        function initializeCharts() {
+            Object.keys(sensorData).forEach(sensorId => {
+                const ctx = document.getElementById(sensorId + '-chart').getContext('2d');
+                charts[sensorId] = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: Array.from({length: 20}, (_, i) => (20-i) + 'min'),
+                        datasets: [{
+                            label: 'Wert',
+                            data: sensorData[sensorId].history,
+                            borderColor: '#4299e1',
+                            backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                display: false
+                            },
+                            x: {
+                                display: false
+                            }
+                        },
+                        elements: {
+                            point: {
+                                radius: 0
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Prediction Chart für Motortemperatur-Vorhersage
+            const predictionCtx = document.getElementById('prediction-chart').getContext('2d');
+            const now = new Date();
+            const labels = [];
+            const historicalData = [];
+            const predictedData = [];
+            
+            // Historische Daten (letzte 2 Stunden)
+            for (let i = 120; i >= 0; i -= 10) {
+                const time = new Date(now.getTime() - i * 60000);
+                labels.push(time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0'));
+                if (i > 0) {
+                    historicalData.push(85 + Math.sin(i/20) * 3 + (120-i) * 0.05); // Steigender Trend
+                    predictedData.push(null);
+                } else {
+                    historicalData.push(92);
+                    predictedData.push(92);
+                }
+            }
+            
+            // Vorhersage-Daten (nächste 3 Stunden bis 15:00)
+            for (let i = 10; i <= 180; i += 10) {
+                const time = new Date(now.getTime() + i * 60000);
+                labels.push(time.getHours() + ':' + time.getMinutes().toString().padStart(2, '0'));
+                historicalData.push(null);
+                // Exponentieller Anstieg zur kritischen Temperatur um 15:00
+                const temp = 92 + (i/180) * 13 + Math.sin(i/30) * 2;
+                predictedData.push(Math.min(105, temp));
+            }
+
+            predictionChart = new Chart(predictionCtx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Historische Temperatur',
+                            data: historicalData,
+                            borderColor: '#4299e1',
+                            backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Vorhersage',
+                            data: predictedData,
+                            borderColor: '#e53e3e',
+                            backgroundColor: 'rgba(229, 62, 62, 0.1)',
+                            borderWidth: 3,
+                            borderDash: [10, 5],
+                            fill: false,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Kritische Temperatur',
+                            data: Array(labels.length).fill(100),
+                            borderColor: '#f56565',
+                            borderWidth: 1,
+                            borderDash: [2, 2],
+                            fill: false,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 80,
+                            max: 110,
+                            title: {
+                                display: true,
+                                text: 'Temperatur (°C)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Uhrzeit'
+                            }
+                        }
+                    }
+                }
+            });
+        }
 
         // Generiere realistische Testdaten
         function generateRealisticData(sensor, sensorId, baseValue, variance = 0.02) {
@@ -576,6 +838,7 @@
 
             return Math.max(0, newValue);
         }
+
 
         // Update Sensordaten
         function updateSensorData() {
@@ -647,115 +910,32 @@
 
             // Update Chart
             if (charts[sensorId] && sensor.history.length > 0) {
-                charts[sensorId].data.datasets[0].data = sensor.history.slice();
+                charts[sensorId].data.datasets[0].data = [...sensor.history];
                 charts[sensorId].update('none');
             }
         }
 
-        // Initialisiere Charts
-        function initializeCharts() {
-            Object.keys(sensorData).forEach(sensorId => {
-                const chartElement = document.getElementById(sensorId + '-chart');
-                if (chartElement) {
-                    const ctx = chartElement.getContext('2d');
-                    charts[sensorId] = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: Array.from({length: 20}, (_, i) => (20-i) + 'min'),
-                            datasets: [{
-                                label: 'Wert',
-                                data: sensorData[sensorId].history,
-                                borderColor: '#4299e1',
-                                backgroundColor: 'rgba(66, 153, 225, 0.1)',
-                                borderWidth: 2,
-                                fill: true,
-                                tension: 0.4
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            plugins: {
-                                legend: {
-                                    display: false
-                                }
-                            },
-                            scales: {
-                                y: {
-                                    display: false
-                                },
-                                x: {
-                                    display: false
-                                }
-                            },
-                            elements: {
-                                point: {
-                                    radius: 0
-                                }
-                            }
-                        }
-                    });
-                }
-            });
-        }
-
-        // Fahrzeugauswahl-Funktionalität
-        function initializeVehicleSelector() {
-            const vehicleCards = document.querySelectorAll('.vehicle-card');
-            const selectedVehicleSpan = document.getElementById('selected-vehicle');
-            
-            vehicleCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    // Entferne active class von allen cards
-                    vehicleCards.forEach(c => c.classList.remove('active'));
-                    // Füge active class zur geklickten card hinzu
-                    this.classList.add('active');
-                    
-                    // Update selected vehicle display
-                    const vehicleName = this.querySelector('.vehicle-name').textContent;
-                    const vehicleId = this.querySelector('.vehicle-id').textContent;
-                    selectedVehicleSpan.textContent = `${vehicleName} (${vehicleId})`;
-                    
-                    // Hier könnte man die Sensordaten für das gewählte Fahrzeug laden
-                    console.log('Fahrzeug gewechselt zu:', vehicleName);
-                });
-            });
-        }
-
         // Initialisierung
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Initializing dashboard...');
-            
-            // Fahrzeugauswahl initialisieren
-            initializeVehicleSelector();
-            
-            // Initiale Daten generieren
+            // Initiale Daten generieren mit realistischeren Werten
             Object.keys(sensorData).forEach(sensorId => {
                 for (let i = 0; i < 20; i++) {
-                    let historicalValue;
+                    let historicalValue = generateRealisticData(sensorData[sensorId], sensorId, sensorData[sensorId].current);
                     
+                    // Für Motorbank Links: Trend nach oben in der Vergangenheit
                     if (sensorId === 'temp1') {
-                        // Motorbank Links: steigender Trend
                         historicalValue = 85 + (i * 0.3) + (Math.random() - 0.5) * 2;
-                    } else {
-                        historicalValue = generateRealisticData(sensorData[sensorId], sensorId, sensorData[sensorId].current);
                     }
                     
-                    const formattedValue = parseFloat(historicalValue.toFixed(sensorId.startsWith('exhaust') ? 2 : 0));
-                    sensorData[sensorId].history.push(formattedValue);
+                    sensorData[sensorId].history.push(parseFloat(historicalValue.toFixed(sensorId.startsWith('exhaust') ? 2 : 0)));
                 }
             });
 
-            // Charts initialisieren
             initializeCharts();
-            
-            // Erste Datenaktualisierung
             updateSensorData();
             
             // Update alle 5 Sekunden
             setInterval(updateSensorData, 5000);
-            
-            console.log('Dashboard initialization complete');
         });
     </script>
 </body>
